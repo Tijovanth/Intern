@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+  <welcome-file-list>
+    <welcome-file>ChatInvite.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+  <servlet-name>SendChat</servlet-name>
+  <servlet-class>com.tijo.SendChatInvitation</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>SendChat</servlet-name>
+  <url-pattern>/sendInvite</url-pattern>
+  </servlet-mapping>
+  <servlet>
+  <servlet-name>ReceiveChat</servlet-name>
+  <servlet-class>com.tijo.MessageReceiver</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>ReceiveChat</servlet-name>
+  <url-pattern>/_ah/xmpp/message/chat</url-pattern>
+  </servlet-mapping>
+</web-app>
