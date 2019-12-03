@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cronentries>
+
+<cron>
+<url>/SendCron</url>
+<description>Message will come at every 1 min</description>
+<schedule>every 1 mins</schedule>
+</cron>
+</cronentries>

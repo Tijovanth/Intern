@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<queue-entries>
+    <queue>
+      <name>insert</name>
+      <rate>1/s</rate>
+      <bucket-size>10</bucket-size>
+      <max-concurrent-requests>3</max-concurrent-requests>
+      <retry-parameters>
+        <task-retry-limit>7</task-retry-limit>
+        <task-age-limit>2d</task-age-limit>
+      </retry-parameters>
+    </queue>
+ </queue-entries>
