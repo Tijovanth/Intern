@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<queue-entries>
+    <queue>
+      <name>queue-blue</name>
+      <rate>1/s</rate>
+      <bucket-size>10</bucket-size>
+      <max-concurrent-requests>3</max-concurrent-requests>
+    </queue>
+ </queue-entries>
