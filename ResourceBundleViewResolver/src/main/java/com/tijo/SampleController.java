@@ -1,0 +1,18 @@
+package com.tijo;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
+
+@Controller
+public class SampleController {
+
+	@RequestMapping(value="/sample.ds",method=RequestMethod.GET)
+	public ModelAndView sample()
+	{
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("Another");
+		return mv;
+	}
+}
