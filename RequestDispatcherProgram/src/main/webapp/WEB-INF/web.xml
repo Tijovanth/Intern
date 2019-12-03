@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+  <welcome-file-list>
+    <welcome-file>HtmlFiles/index.html</welcome-file>
+  </welcome-file-list>
+  
+   <servlet>
+  <servlet-name>IndexServlet</servlet-name>
+  <servlet-class>com.tijo.IndexServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>IndexServlet</servlet-name>
+  <url-pattern>/Index</url-pattern>
+ 
+  </servlet-mapping>
+  
+   <servlet>
+  <servlet-name>ElectronicServlet</servlet-name>
+  <servlet-class>com.tijo.ElectronicServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>ElectronicServlet</servlet-name>
+  <url-pattern>/Electronic</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>ClothingServlet</servlet-name>
+  <servlet-class>com.tijo.ClothingServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>ClothingServlet</servlet-name>
+  <url-pattern>/Clothing</url-pattern>
+  </servlet-mapping>
+</web-app>
