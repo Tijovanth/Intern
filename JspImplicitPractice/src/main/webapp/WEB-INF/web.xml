@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+  <welcome-file-list>
+    <welcome-file>OutObject.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+  <servlet-name>ConfigObject</servlet-name>
+  <jsp-file>/ConfigObject.jsp</jsp-file>
+   <init-param>
+  <param-name>Name</param-name>
+  <param-value>Tijo</param-value>
+  </init-param>  
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>ConfigObject</servlet-name>
+  <url-pattern>/ConfigObject</url-pattern>
+  </servlet-mapping>
+</web-app>
