@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<beans  
+    xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+    xmlns:p="http://www.springframework.org/schema/p"  
+    xsi:schemaLocation="http://www.springframework.org/schema/beans  
+                http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">  
+                
+     <bean id="address1" class="com.tijo.Address">  
+<property name="addressLine1" value="172/83,Oldwashermenpet"></property>  
+<property name="city" value="Chennai"></property>  
+<property name="state" value="TamilNadu"></property>  
+<property name="country" value="India"></property>  
+</bean> 
+           
+    <bean id="obj" class="com.tijo.Employee">  
+<property name="id">  
+<value>10</value>  
+</property>  
+<property name="name">  
+<value>Tijo</value>  
+</property>  
+<property name="city">  
+<value>Chennai</value>  
+</property>   
+<property name="address" ref="address1"></property>
+       </bean>
+ </beans>               
