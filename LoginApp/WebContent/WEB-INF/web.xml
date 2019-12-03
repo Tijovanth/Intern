@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>LoginApp</display-name>
+  <welcome-file-list>
+    <welcome-file>HTMLFiles/Registration.html</welcome-file>
+  </welcome-file-list>
+ <session-config>
+ <session-timeout>0</session-timeout>
+ </session-config>
+  <servlet>
+  <servlet-name>Registration</servlet-name>
+  <servlet-class>com.tijo.RegistrationServlet</servlet-class>
+  <load-on-startup>0</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>Registration</servlet-name>
+  <url-pattern>/Registration</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>Login</servlet-name>
+  <servlet-class>com.tijo.LoginServlet</servlet-class>
+  <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>Login</servlet-name>
+  <url-pattern>/Login</url-pattern>
+  </servlet-mapping>
+ 
+ <servlet>
+  <servlet-name>Profile</servlet-name>
+  <servlet-class>com.tijo.ProfileServlet</servlet-class>
+  <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>Profile</servlet-name>
+  <url-pattern>/Profile</url-pattern>
+  </servlet-mapping>
+  
+</web-app>

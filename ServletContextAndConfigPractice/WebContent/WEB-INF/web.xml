@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>ServletContextAndConfigPractice</display-name>
+  <welcome-file-list>
+    <welcome-file>Recruiter.jsp</welcome-file>
+    <welcome-file>Applicant.html</welcome-file>
+  </welcome-file-list>
+  
+  <servlet>
+  <servlet-name>Recuiter</servlet-name>
+  <servlet-class>com.tijo.Recuiter</servlet-class>
+  <init-param>
+  <description>This is for Recruiter</description>
+  <param-name>Email</param-name>
+  <param-value>www.tijo.com</param-value>
+  </init-param>
+  </servlet>
+  <servlet-mapping>
+   <servlet-name>Recuiter</servlet-name>
+   <url-pattern>/Recuiter</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>Applicant</servlet-name>
+  <servlet-class>com.tijo.Applicant</servlet-class>
+  <init-param>
+  <description>This is for Applicant</description>
+  <param-name>Email</param-name>
+  <param-value>www.kakaka.com</param-value>
+  </init-param>
+  </servlet>
+  <servlet-mapping>
+   <servlet-name>Applicant</servlet-name>
+   <url-pattern>/Applicant</url-pattern>
+   <url-pattern>/YenaDa</url-pattern>
+   <url-pattern>/Venna</url-pattern>
+   <url-pattern>/Yeandi</url-pattern>
+  </servlet-mapping>
+  
+  <context-param>
+  <description>This is my website</description>
+  <param-name>WebSiteName</param-name>
+  <param-value>Tijovanth.com</param-value>
+  </context-param>
+</web-app>
