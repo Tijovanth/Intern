@@ -1,0 +1,25 @@
+<html>
+    <body>
+            <div id="parent-id">
+                    <p class="test" name="tijo">hello world 1</p>
+                    <p class="test" >hello world 2</p>
+                    <p class= "test">hello world 3</p>
+                    <p class="test">hello world 4</p>
+                </div>
+                <h1 class="test">Hai Iam tijo</h1>
+        <script>
+          var parent_id = document.getElementById("parent-id");
+          var test = document.getElementsByClassName("test");
+          console.log(test.length);
+          console.log(test.namedItem("tijo"));
+          for(let i = 0; i < test.length; i++)
+          {
+              console.log(test[i])
+          }
+          console.log(test.item(3).textContent)
+          var testCollection = parent_id.getElementsByClassName("test")
+          console.log(testCollection.item(0).textContent)
+          console.log(testCollection.length)
+        </script>
+    </body>
+</html>

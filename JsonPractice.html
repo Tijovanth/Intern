@@ -1,0 +1,30 @@
+<html>
+
+<body>
+    <script>
+        var myfun = function () {
+            var a = 10, b = 12;
+            console.log("hai")
+            console.log("bye")
+            console.log("Tijo")
+        }
+        var myobj = { myfunc: myfun.toString() }
+        var myjson = JSON.stringify(myobj);
+        console.log(myjson)
+        myobj = JSON.parse(myjson)
+        eval("(" + myobj.myfunc + ")()")
+
+        myobj = {
+            "name": "John", "age": 31,
+            "pets": [
+                { "animal": "dog", "name": "Fido" },
+                { "animal": null, "name": "Felix" },
+                { "animal": "hamster", "name": "Lightning" }
+            ]
+        }
+        myjson = JSON.stringify(myobj)
+        myobj = JSON.parse(myjson)
+        console.log(myobj.pets[1].animal)
+    </script>
+</body>
+</html>

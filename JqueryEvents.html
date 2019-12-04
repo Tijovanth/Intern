@@ -1,0 +1,52 @@
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <p id="demo">Hai Iam Tijo</p>
+    <p>Click me too!</p>
+
+    <h1 id="h1">Hai Iam H1</h1>
+    <h2>Hai Iam h2</h2>
+    <script>
+
+        $(document).ready(function () {
+            $("#demo").click(function () {
+                $(this).hide();
+            });
+        });
+
+        $(document).ready(function () {
+            $("p").dblclick(function () {
+                $(this).hide()
+            })
+        })
+
+        $(document).ready(function () {
+            $("#h1").hover(function () {
+                $(this).css("backgroundColor", "red")
+            }
+                , function () {
+                    $(this).css("backgroundColor", "blue")
+                })
+        })
+
+        $(document).ready(function () {
+            $("h2").on({
+                click: function () {
+                    $(this).css("color", "red")
+                },
+                mouseenter: function(){
+                    $(this).css("color","blue")
+                },
+                mouseleave: function(){
+                    $(this).css("color","green")
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>

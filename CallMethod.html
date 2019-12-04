@@ -1,0 +1,14 @@
+<html>
+    <body>
+        <script>
+             var person = {fullName:function(city,country)
+             {
+                return this.firstName+" "+this.lastName+" "+city+" "+country;
+             }}
+
+             var name = {firstName:"Tijo",lastName:"vanth"};
+             document.write("<br>"+person.fullName.call(name,"Chennai","India")+"<br>");
+             document.write("<br>"+person.fullName.apply(name,["Chennai","India"])+"<br>");
+        </script>
+    </body>
+</html>

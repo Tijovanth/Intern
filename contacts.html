@@ -1,0 +1,59 @@
+<html>
+<head>
+<script>
+function checkEmail(id)
+{
+ var mail =  document.getElementById(id).value
+ var pattern = /[a-zA-Z0-9\\W]+@[a-zA-Z]+.\w{2,3}/g
+ if(pattern.test(mail) != true)
+  {
+    document.getElementById("p2").style.display = "block";
+    document.getElementById("p2").innerHTML = "Invalid Email ID";
+    document.getElementById("p2").style.color = "red";
+    document.getElementById(id).focus();
+  }else
+  {
+        document.getElementById("p2").style.display = "none";
+   }
+}
+function checkPhoneNumber(id)
+{
+  var phone = document.getElementById(id).value 
+  if(id == "phone1")
+ {
+  if(phone.length != 10)
+   {
+    document.getElementById("p").style.display = "block";
+    document.getElementById("p").innerHTML = "Invalid Phone Number Length Must be 10";
+    document.getElementById("p").style.color = "red";
+    document.getElementById(id).focus();
+   }else
+   {
+    document.getElementById("p").style.display = "none";
+   }
+  }else
+  {
+  if(phone.length != 10)
+   {
+    document.getElementById("p1").style.display = "block";
+    document.getElementById("p1").innerHTML = "Invalid Phone Number Length Must be 10";
+    document.getElementById("p1").style.color = "red";
+    document.getElementById(id).focus();
+   }else
+   {
+    document.getElementById("p1").style.display = "none";
+   }
+  }
+}
+</script>
+</head>
+<body>
+Name:<input  type="text" id="name"><br><br>
+Email:<input onblur="checkEmail(this.id)" type="text" id="email"><br><br>
+<p id ="p2" style="display:none"></p>
+Phone Number:<input onblur="checkPhoneNumber(this.id)" type="text" id="phone1"><br><br>
+<p id ="p" style="display:none"></p>
+Alternative Number:<input onblur="checkPhoneNumber(this.id)" type="text" id="phone2"><br><br>
+<p id ="p1" style="display:none" ></p>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<html>
+    <body>
+        <script>
+            //'use strict';
+            var person1 = {firstname:"Tijo",lastName:"vanth"};
+            var person = new Object();
+             person.firstName = "Tijo";
+             person.lastName = "Vanth";
+             person.age = 20;
+             person.eyeColor = "brown";
+             var x = person
+             x.firstName = "Mojo";
+             document.write(person.firstName);
+             // Enumerable Writable Configurable
+             var myObject = {bike:"yamaha","car":"BMW",cycle:"Hercules"}
+             document.write(myObject.car);
+             document.write("<br>")
+             console.log(Object.getOwnPropertyDescriptor(myObject,'car'));
+             //console.log(Object.defineProperty(myObject,'car',{writable:false,enumerable:false,configurable:false}))
+             console.log(Object.getOwnPropertyDescriptor(myObject,'car'));
+             console.log(Object.defineProperty(myObject,'car',{writable:false}));
+             console.log(Object.defineProperty(myObject,'car',{enumerable:false}));
+             myObject.car = "Audi";
+             console.log(myObject.car)
+             for(var i in myObject)
+             {
+                 console.log(i);
+             }
+             console.log(myObject.car)
+             Object.defineProperty(myObject,'car',{
+                 value:"Jaguar"
+             })
+             console.log(myObject)
+
+             var chocolate = {DairyMilk : 25, KitKat : 30};
+        </script>
+    </body>
+</html>

@@ -1,0 +1,32 @@
+<html>
+    <body>
+            <div id="test"> 
+                    The following element contains some 
+                    <codes>code</codes> and 
+                    <italic>some text</italic>. 
+                </div>
+            <p>Hai </p>
+        <script>
+           var test = document.getElementById("test");
+           console.log(test.innerHTML);
+           console.log(test.innerText)
+           console.log(test.textContent)
+           //test.innerText = "<p>Test</p>"
+           //test.innerHTML = "<p>Test</p>"
+            document.getElementsByTagName("p")[0].setAttribute("id","demo")
+            document.getElementById("demo").innerText = "Hai Iam Tijo"
+            var demo = document.getElementById("demo")
+            if(demo.hasAttribute("id"))
+            {
+                console.log(demo.getAttributeNode("id"))
+                console.log(demo.getAttribute("id"))
+            }
+            demo.removeAttribute(demo.getAttribute("id"));
+            console.log(demo.getAttributeNode("id"))
+            if(demo.hasAttribute("id"))
+            {
+                console.log(demo.getAttribute("id"))
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,18 @@
+<html>
+    <body>
+            <div id="parent-id">
+                    <p>hello word1</p>
+                    <p id="test1">hello word2</p>
+                    <p>hello word3</p>
+                    <p>hello word4</p>
+                </div>
+        <script>
+      var parent_id = document.getElementById("parent-id");
+        //var test = parent_id.getElementById("test1")
+      console.log(parent_id.childNodes.values().next())
+      var create =  document.createElement('p');
+      create.innerHTML = "Hai I was created by javascript";
+      parent_id.appendChild(create)
+        </script>
+    </body>
+</html>

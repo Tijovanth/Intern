@@ -1,0 +1,34 @@
+<html>
+     <body>
+         <script>
+             var obj = {}
+             console.log(obj.toString());
+             console.log(obj);
+             obj = {
+                    firstName : "Tijo",
+                    lastName : "vanth", 
+                    // get fullname(){
+                    //     return this.firstName+this.lastName;
+                    // },
+                    set setFname(fName){
+                        this.firstName = fName;
+                    }
+            };
+              obj.setFname = "Vicky";
+              console.log(obj);
+            //   console.log(obj.fullname);
+
+          function Person(name,age)
+          {
+              this.name = name;
+              this.age = age;
+              this.nationality = "Tamil";
+              this.do = function(){console.log("code")};
+          }
+          var Tijo = new Person("Tijo",20);
+          var vicky = new Person("Vicky",10);
+          console.log(Tijo.age+Tijo.name+Tijo.nationality)
+          console.log(Tijo.do())
+         </script>
+     </body>
+</html>

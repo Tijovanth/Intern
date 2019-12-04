@@ -1,0 +1,31 @@
+<html>
+    <body>
+
+        <script>
+        var num = 16, text = "Tijo", obj ={"tijo":123,123:"tijo"};
+        document.write(num + text+"<br>");
+        num = "vanth";
+        text = 123;
+        document.write(typeof num+"<br>");
+        document.write(typeof text+"<br>");
+        document.write(typeof obj+"<br>");
+        var a;
+        document.write(a+"<br>");
+        document.write(typeof a+"<br>");
+        document.write(typeof obj+"<br>");
+        obj = null;
+        document.write(typeof obj+"<br>");
+        obj ={"tijo":123,123:"tijo"};
+        obj = undefined;
+        document.write(typeof obj+"<br>");
+        var arr=[]
+        var fun = function myfunc(){
+
+        }
+        document.write(typeof fun+"<br>")
+        fun = null;
+        document.write(typeof fun+"<br>")
+        document.write(typeof arr);
+        </script>
+    </body>
+</html>

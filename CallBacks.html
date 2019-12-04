@@ -1,0 +1,16 @@
+<html>
+    <body>
+        <script>
+            function doHomeWork(subject, callback)
+            {
+                console.log("Iam doing "+subject+" homework" );
+                callback(subject);
+            }
+            function finish(subject)
+            {
+                console.log("I finished my "+subject+" homework");
+            }
+            doHomeWork('Maths',finish)
+        </script>
+    </body>
+</html>

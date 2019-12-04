@@ -1,0 +1,20 @@
+<html>
+    <body>
+        <script>
+            //"use strict";
+            var person = {fullname:function(){
+                console.log(this);
+            }}
+            function myFunction()
+            {
+                console.log(this);
+            }
+            myFunction()
+            person.fullname();
+             var variable = this;
+             console.log(variable);
+             
+        </script>
+        <button onclick="this.style.backgroundColor = 'red'">Hai My Name is Button</button>
+    </body>
+</html>

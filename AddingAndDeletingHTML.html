@@ -1,0 +1,35 @@
+<html>
+
+<body>
+
+    <div id="div1">The text above has been created dynamically.</div>
+    <div id="top">
+        <div id="nested">Hai</div>
+        Yepdi iruka
+    </div>
+
+    <div id="top1">
+        <p id="nested1">Hai</p>
+        <p id="nested2">Hai Tijo</p>
+        <span id="nested3">va da </span>
+        Yepdi iruka
+    </div>
+    <script>
+        document.body.onload =
+            (function () {
+                var para = document.createElement("p");
+                var text = document.createTextNode("Hai was created by javacsript");
+                para.appendChild(text);
+                document.body.insertBefore(para, document.getElementById("div1"));
+            })();
+
+        let node = document.getElementById("nested");
+        console.log(node.parentNode)
+        if (node.parentNode) {
+            node.parentNode.removeChild(node);
+        }
+        let element = document.getElementById("top1");
+        console.log(element.firstElementChild)
+    </script>
+</body>
+</html>

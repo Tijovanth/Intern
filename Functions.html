@@ -1,0 +1,84 @@
+<html>
+<body>
+<script>
+    document.write(myFunction(1)+"<br>");
+function myFunction(a,b)
+{
+    document.write(myFunction.toString()+"<br>")
+    document.write(b+"<br>")
+   return a + b;
+}
+//document.write(functionVariable(10,20)+"<br>"); it will not work because cannot be performed for function expression
+var functionVariable = function myFunction(a,b)
+{
+    return a - b;
+}
+document.write(functionVariable(10,20)+"<br>");
+//AnonymousFunction
+var anoymous1 = function(){
+    document.write("Hai Iam Anoymous Function <br>");
+}
+anoymous1();
+//document.write(anoymous1); it will give function definition
+
+//Funtion Constructor
+var FunctionConstruction = new Function("document.write('Hai Iam Declared By Using Function Construction <br>')");
+FunctionConstruction();
+// Self Invoking Function
+
+var variable = (function AnotherFunction(a,b)
+{
+    document.write(arguments.length+"<br>")
+   return a * b;
+})(2,3);
+document.write(variable+"<br>");
+// default Values of the parameter
+function display(a = 12, b = 56.0)
+{
+    document.write(a + b+"<br>");
+}
+display();
+// Arguments Object
+
+function print(a,b,c)
+{
+    var sum = 0;
+    document.write(arguments.length+"<br>");
+    for(var i = 0; i < arguments.length; i++)
+    {
+       sum += arguments[i]
+    }
+    document.write(sum+"<br>");
+    for(var i = 0; i < arguments.length; i++)
+    {
+       arguments[i] = 0;
+       document.write(arguments[i]+" ")
+    }
+   
+}
+var a = 10,b=20,c=30,d=50
+print(a,b,c,d);
+document.write("<br>"+a+" "+b+" "+c+" "+d);
+// Invoking the function
+function myFunction1()
+{
+    document.write("<br> Hai Iam My Function <br>");
+}
+window.myFunction1();
+
+var person = {firstName:"Tijo",lastName:"vanth",fullName:function(){
+    return this.firstName+this.lastName
+}}
+document.write(person.fullName());
+
+// Function invocation using Constructor
+
+function popcorn(flavor)
+{
+    this.taste = flavor;
+}
+var obj = new popcorn("sweet");
+document.write("<br>"+obj.taste);
+</script>
+</body>
+</html>

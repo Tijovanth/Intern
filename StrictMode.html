@@ -1,0 +1,37 @@
+<html>
+    <body>
+        <script>
+           "use strict";
+            console.log(4+5);
+            console.log(a);
+            var a = 10;
+            var a = 5;
+            function myFunction()
+            {
+                // y = 10;
+                // console.log(y);  This will cause an error
+            }
+            myFunction();
+           // obj = {12:12,13:13}; This will cause an error
+           var obj = {12:12,13:13};
+           //delete obj; This will cause an error
+           Object.defineProperty(obj,'15',{value:15,writable:false});
+           //obj[15] = "16"; This will cause an error
+        //    var eval = 1234;
+        //    var arguments = 454; This will cause an error
+
+       // eval("var a = 10") This will cause an error
+
+       function myFunction1() {
+          console.log(this); // will alert "undefined"
+              }
+               myFunction1();
+        
+        obj = {fullname:function()
+        {
+            console.log( this.toString());
+        }}
+        obj.fullname();
+        </script>
+    </body>
+</html>

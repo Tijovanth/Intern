@@ -1,0 +1,22 @@
+<html>
+
+<body>
+    <p class="intro">The DOM is very useful.</p>
+    <p class="intro">This example demonstrates the <b>querySelectorAll</b> method.</p>
+    <p id="demo"></p>
+    <div id="div">
+        <a href="https://www.google.com">google.com</a>
+        <a href="http://www.disney.com" target="_blank">disney.com</a>
+        <a href="http://www.wikipedia.org" target="_top">wikipedia.org</a>
+    </div>
+    
+    <script>
+        var x = document.querySelector(".intro");
+        console.log(x)
+        document.getElementById("demo").innerHTML =
+            'The first paragraph (index 0) with class="intro": ' + x.innerHTML;
+        console.log(document.querySelector("#demo"))
+        document.getElementById("div").querySelector("a[target]").style.backgroundColor = "red";
+    </script>
+</body>
+</html>
